@@ -1,5 +1,5 @@
 import { preloadImages } from './utils.js';
-import { Content } from './content.js';
+import { Content } from './content.js?v=5';
 import { LanguageSwitcher } from './languageSwitcher.js?v=4';
 
 // Smooth scrolling.

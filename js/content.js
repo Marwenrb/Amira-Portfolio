@@ -84,7 +84,41 @@ export class Content {
 			once: true
 		});
 
-		// Add parallax effect to titles
+		// Next-level cinematic entrance animation for title and text box
+		const h2 = this.DOM.inner.querySelector('h2');
+		const p = this.DOM.inner.querySelector('p');
+
+		if (h2 && p) {
+			// Set initial states for entrance
+			gsap.set(h2, { opacity: 0, y: 60 });
+			gsap.set(p, { opacity: 0, y: 100, scale: 0.95, filter: 'blur(15px)' });
+
+			// Reveal animation when entering viewport
+			ScrollTrigger.create({
+				trigger: this.DOM.el,
+				start: 'top 75%',
+				onEnter: () => {
+					gsap.to(h2, {
+						opacity: 1,
+						y: 0,
+						duration: 1.2,
+						ease: 'expo.out'
+					});
+					gsap.to(p, {
+						opacity: 1,
+						y: 0,
+						scale: 1,
+						filter: 'blur(0px)',
+						duration: 1.6,
+						ease: 'power4.out',
+						delay: 0.2
+					});
+				},
+				once: true
+			});
+		}
+
+		// Subtle parallax effect on the whole block to keep the floating feel
 		gsap.timeline({
 			scrollTrigger: {
 				trigger: this.DOM.el,
@@ -95,7 +129,7 @@ export class Content {
 		})
 		.to(this.DOM.inner, {
 			ease: 'none',
-			yPercent: -100
+			yPercent: -60 // reduced slightly for a smoother modern feel
 		});
 
 		// show canvasWrap when the element enters the viewport
