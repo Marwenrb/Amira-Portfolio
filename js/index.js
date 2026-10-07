@@ -1,6 +1,6 @@
 import { preloadImages } from './utils.js';
 import { Content } from './content.js';
-import { LanguageSwitcher } from './languageSwitcher.js?v=3';
+import { LanguageSwitcher } from './languageSwitcher.js?v=4';
 
 // Smooth scrolling.
 let lenis;

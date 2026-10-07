@@ -52,8 +52,12 @@ A premium, interactive personal portfolio website for Amira Nawali featuring an 
    ```bash
    git clone https://github.com/Marwenrb/Amira-Portfolio.git
    ```
-2. Start a local server (e.g. `npx serve` or `python -m http.server`) to avoid CORS issues with ES6 modules.
-3. Open `http://localhost:8000` (or the port specified by your server) in your browser.
+2. Navigate into the inner directory:
+   ```bash
+   cd Amira-Portfolio/Maher-Lamouchi---Personal-Portfolio-main
+   ```
+3. Start a local server (e.g. `npx serve` or `python -m http.server`) to avoid CORS issues with ES6 modules.
+4. Open `http://localhost:3000` (or the port specified by your server) in your browser.
 
 ## License
 
