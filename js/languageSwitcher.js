@@ -63,7 +63,8 @@ const LanguageSwitcher = {
         const toggle = document.querySelector('.language-toggle');
         if (!toggle) return;
         
-        // Set active language class
+        // Set active language class (clearing previous to prevent duplicates)
+        toggle.classList.remove('lang-fr', 'lang-en', 'lang-ar');
         toggle.classList.add(`lang-${this.currentLang}`);
         
         // Update active language display
