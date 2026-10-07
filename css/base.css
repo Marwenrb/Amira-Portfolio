@@ -206,6 +206,7 @@ body #cdawrap {
 	width: 100vw;
 	--imgRatio: 1344 / 896;
 	height: calc(var(--imgRatio) * 100vw);
+	min-height: 150vh; /* Ensure there is enough scrollable area on mobile */
 	padding: 0 var(--padding-page);
 	position: relative;
 }
@@ -219,6 +220,7 @@ body #cdawrap {
 	background-position: 50% 50%;
 	background-size: cover;
 	opacity: 0;
+	pointer-events: none;
 }
 
 .no-js .canvas-wrap {
