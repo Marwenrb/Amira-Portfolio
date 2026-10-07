@@ -22,12 +22,14 @@ const initSmoothScrolling = () => {
 };
 
 // Initialize language switcher and UI elements
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize language switcher (which also sets up the back-to-top button)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        LanguageSwitcher.init();
+    });
+} else {
+    // DOM already loaded (common with type="module")
     LanguageSwitcher.init();
-
-
-});
+}
 
 // .content elements
 const contentElems = [...document.querySelectorAll('.content')];
