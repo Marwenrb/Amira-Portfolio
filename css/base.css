@@ -203,7 +203,7 @@ body #cdawrap {
 	display: grid;
 	grid-template-rows: 100vh 1fr auto;
 	grid-template-columns: 100%;
-	width: 100vw;
+	width: 100%;
 	--imgRatio: 1344 / 896;
 	height: calc(var(--imgRatio) * 100vw);
 	min-height: 150vh; /* Ensure there is enough scrollable area on mobile */

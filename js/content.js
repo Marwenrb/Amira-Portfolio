@@ -91,12 +91,12 @@ export class Content {
 		if (h2 && p) {
 			// Set initial states for entrance
 			gsap.set(h2, { opacity: 0, y: 60 });
-			gsap.set(p, { opacity: 0, y: 100, scale: 0.95, filter: 'blur(15px)' });
+			gsap.set(p, { opacity: 0, y: 100, scale: 0.95 });
 
 			// Reveal animation when entering viewport
 			ScrollTrigger.create({
-				trigger: this.DOM.el,
-				start: 'top 75%',
+				trigger: this.DOM.inner,
+				start: 'top 85%',
 				onEnter: () => {
 					gsap.to(h2, {
 						opacity: 1,
@@ -108,7 +108,6 @@ export class Content {
 						opacity: 1,
 						y: 0,
 						scale: 1,
-						filter: 'blur(0px)',
 						duration: 1.6,
 						ease: 'power4.out',
 						delay: 0.2
