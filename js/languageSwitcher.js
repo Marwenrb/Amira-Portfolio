@@ -23,16 +23,12 @@ const LanguageSwitcher = {
             const response = await fetch('js/translations.json');
             this.translations = await response.json();
             
-            // Initialize with browser language or default to French
-            const browserLang = navigator.language.split('-')[0];
-            if (this.languages.includes(browserLang)) {
-                this.currentLang = browserLang;
-            }
-            
             // Check localStorage for saved language preference
             const savedLang = localStorage.getItem('preferredLanguage');
             if (savedLang && this.languages.includes(savedLang)) {
                 this.currentLang = savedLang;
+            } else {
+                this.currentLang = 'fr'; // Official default language
             }
             
             // Initialize language toggle

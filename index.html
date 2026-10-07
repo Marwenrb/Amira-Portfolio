@@ -115,7 +115,7 @@
 			
 			.language-toggle__button:hover .language-toggle__languages {
 				opacity: 1;
-				pointer-events: all !important;
+				pointer-events: auto !important;
 			}
 			
 			/* Hide the currently active language from the rest of the list */
@@ -243,62 +243,62 @@
 				stroke: #1c000b;
 			}
 
-			/* Next-Level UI/UX Premium Apple Loader */
+			/* Ultra Advanced Apple-Intelligence Style Loader */
 			.premium-loader {
 				position: fixed;
 				top: 0; left: 0; width: 100vw; height: 100vh;
-				background: rgba(255, 240, 245, 0.4);
-				backdrop-filter: blur(25px);
-				-webkit-backdrop-filter: blur(25px);
+				background: rgba(253, 251, 251, 0.7);
+				backdrop-filter: blur(40px);
+				-webkit-backdrop-filter: blur(40px);
 				z-index: 9999;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				flex-direction: column;
 				opacity: 0;
 				pointer-events: none;
-				transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+				transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 			}
 
 			.js .loading .premium-loader {
 				opacity: 1;
-				pointer-events: all;
+				pointer-events: auto;
 			}
 
-			.premium-loader__ring {
-				width: 64px;
-				height: 64px;
+			/* Siri/Apple Intelligence style breathing glowing orb */
+			.premium-loader__orb {
+				width: 100px;
+				height: 100px;
 				border-radius: 50%;
-				padding: 3px;
-				background: conic-gradient(from 0deg, transparent 0%, transparent 40%, #ff2d55 100%);
-				animation: spinRing 1s cubic-bezier(0.6, 0.2, 0.4, 0.8) infinite;
-				filter: drop-shadow(0 0 10px rgba(255, 45, 85, 0.3));
+				background: linear-gradient(135deg, #ff2d55, #ffb6c1, #ff2d55);
+				background-size: 200% 200%;
+				filter: blur(25px);
+				animation: breatheOrb 3s ease-in-out infinite, gradientShift 3s ease infinite;
 			}
 
-			.premium-loader__ring-inner {
-				width: 100%;
-				height: 100%;
-				background: #fdfbfb; /* Inner matches body roughly to create hollow ring */
-				border-radius: 50%;
-			}
-
-			.premium-loader__text {
-				margin-top: 24px;
-				font-size: 13px;
-				font-weight: 500;
+			.premium-loader__logo {
+				position: absolute;
+				font-size: 18px;
+				font-weight: 400;
+				letter-spacing: 0.3em;
 				color: #1c000b;
-				letter-spacing: 0.15em;
 				text-transform: uppercase;
 				animation: pulseText 2s ease-in-out infinite;
 			}
 
-			@keyframes spinRing {
-				to { transform: rotate(360deg); }
+			@keyframes breatheOrb {
+				0%, 100% { transform: scale(0.8); opacity: 0.5; }
+				50% { transform: scale(1.3); opacity: 0.9; }
+			}
+
+			@keyframes gradientShift {
+				0% { background-position: 0% 50%; }
+				50% { background-position: 100% 50%; }
+				100% { background-position: 0% 50%; }
 			}
 
 			@keyframes pulseText {
-				0%, 100% { opacity: 0.4; transform: translateY(0); }
-				50% { opacity: 1; transform: translateY(-2px); }
+				0%, 100% { opacity: 0.4; }
+				50% { opacity: 1; }
 			}
 
 			/* Hide the original basic loader pseudo-elements */
@@ -310,10 +310,8 @@
 	<body class="demo-1 loading">
 		<!-- Premium Apple Loader Element -->
 		<div class="premium-loader">
-			<div class="premium-loader__ring">
-				<div class="premium-loader__ring-inner"></div>
-			</div>
-			<div class="premium-loader__text">Chargement</div>
+			<div class="premium-loader__orb"></div>
+			<div class="premium-loader__logo">Amoura</div>
 		</div>
 		<main>
 			<div class="frame">
