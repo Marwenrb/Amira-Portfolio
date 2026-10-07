@@ -212,53 +212,77 @@
 			}
 
 			/* Next-Level UI/UX Premium Apple Loader */
-			.js .loading::before {
-				background: #fff0f5; /* Match bg */
-			}
-			.js .loading::after {
-				content: '';
+			.premium-loader {
 				position: fixed;
-				z-index: 1000;
-				top: 50%;
-				left: 50%;
-				width: 60px;
-				height: 60px;
-				margin: -30px 0 0 -30px;
-				background: transparent;
-				border: 2px solid rgba(255, 45, 85, 0.15);
-				border-radius: 50%;
-				animation: pulseLoader 2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
-				opacity: 1;
-			}
-			
-			/* Adding an inner dot for the loader */
-			.js .loading::before {
-				content: '';
-				position: fixed;
-				z-index: 1001;
-				top: 50%;
-				left: 50%;
-				width: 12px;
-				height: 12px;
-				margin: -6px 0 0 -6px;
-				background: #ff2d55;
-				border-radius: 50%;
-				animation: innerDot 2s ease-in-out infinite;
+				top: 0; left: 0; width: 100vw; height: 100vh;
+				background: rgba(255, 240, 245, 0.4);
+				backdrop-filter: blur(25px);
+				-webkit-backdrop-filter: blur(25px);
+				z-index: 9999;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				opacity: 0;
+				pointer-events: none;
+				transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 			}
 
-			@keyframes pulseLoader {
-				0% { transform: scale(0.5); opacity: 1; border-width: 20px; }
-				50% { transform: scale(1.5); opacity: 0; border-width: 2px; }
-				100% { transform: scale(0.5); opacity: 0; }
+			.js .loading .premium-loader {
+				opacity: 1;
+				pointer-events: all;
 			}
-			
-			@keyframes innerDot {
-				0%, 100% { transform: scale(1); opacity: 0.8; }
-				50% { transform: scale(1.5); opacity: 1; box-shadow: 0 0 15px rgba(255, 45, 85, 0.6); }
+
+			.premium-loader__ring {
+				width: 64px;
+				height: 64px;
+				border-radius: 50%;
+				padding: 3px;
+				background: conic-gradient(from 0deg, transparent 0%, transparent 40%, #ff2d55 100%);
+				animation: spinRing 1s cubic-bezier(0.6, 0.2, 0.4, 0.8) infinite;
+				filter: drop-shadow(0 0 10px rgba(255, 45, 85, 0.3));
+			}
+
+			.premium-loader__ring-inner {
+				width: 100%;
+				height: 100%;
+				background: #fdfbfb; /* Inner matches body roughly to create hollow ring */
+				border-radius: 50%;
+			}
+
+			.premium-loader__text {
+				margin-top: 24px;
+				font-size: 13px;
+				font-weight: 500;
+				color: #1c000b;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+				animation: pulseText 2s ease-in-out infinite;
+			}
+
+			@keyframes spinRing {
+				to { transform: rotate(360deg); }
+			}
+
+			@keyframes pulseText {
+				0%, 100% { opacity: 0.4; transform: translateY(0); }
+				50% { opacity: 1; transform: translateY(-2px); }
+			}
+
+			/* Hide the original basic loader pseudo-elements */
+			.js .loading::before, .js .loading::after {
+				display: none !important;
 			}
 		</style>
 	</head>
 	<body class="demo-1 loading">
+		<!-- Premium Apple Loader Element -->
+		<div class="premium-loader">
+			<div class="premium-loader__ring">
+				<div class="premium-loader__ring-inner"></div>
+			</div>
+			<div class="premium-loader__text">Chargement</div>
+		</div>
 		<main>
 			<div class="frame">
 				<div class="frame__title"> 
