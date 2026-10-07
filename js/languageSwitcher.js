@@ -72,14 +72,29 @@ const LanguageSwitcher = {
             activeLabel.textContent = this.currentLang.toUpperCase();
         }
         
-        // Make the entire button clickable
+        // Make the entire button clickable (for mobile devices)
         const button = toggle.querySelector('.language-toggle__button');
+        if (button) {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                button.classList.toggle('is-open');
+            });
+            
+            // Close when clicking anywhere else
+            document.addEventListener('click', () => {
+                button.classList.remove('is-open');
+            });
+        }
         
         // Set up event listeners for language options
         const options = toggle.querySelectorAll('.language-toggle__option');
         options.forEach(option => {
             option.addEventListener('click', (e) => {
                 e.stopPropagation(); // Prevent event bubbling
+                
+                // Close the dropdown explicitly on mobile
+                if (button) button.classList.remove('is-open');
+                
                 const lang = option.getAttribute('data-lang');
                 
                 // Don't do anything if clicking the current language

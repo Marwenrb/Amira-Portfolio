@@ -86,7 +86,8 @@
 				transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
 				justify-content: flex-start !important;
 			}
-			.language-toggle__button:hover {
+			.language-toggle__button:hover,
+			.language-toggle__button.is-open {
 				width: 110px !important;
 			}
 			
@@ -113,7 +114,8 @@
 				transition: opacity 0.3s ease;
 			}
 			
-			.language-toggle__button:hover .language-toggle__languages {
+			.language-toggle__button:hover .language-toggle__languages,
+			.language-toggle__button.is-open .language-toggle__languages {
 				opacity: 1;
 				pointer-events: auto !important;
 			}
@@ -232,9 +234,39 @@
 			}
 			
 			.back-to-top {
-				background: rgba(255, 255, 255, 0.8);
+				position: fixed;
+				bottom: 90px; /* Safe distance for mobile navigation bars */
+				right: 20px;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background: rgba(255, 255, 255, 0.8) !important;
 				backdrop-filter: blur(10px);
-				border: 1px solid rgba(216, 150, 163, 0.3);
+				border: 1px solid rgba(216, 150, 163, 0.3) !important;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				z-index: 1000;
+				opacity: 0;
+				pointer-events: none;
+				transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				transform: translateY(20px) scale(0.9);
+			}
+			.back-to-top.visible {
+				opacity: 1;
+				pointer-events: auto;
+				transform: translateY(0) scale(1);
+			}
+			.back-to-top__circle {
+				position: absolute;
+				top: -1px; left: -1px;
+				transform: rotate(-90deg);
+				width: 50px; height: 50px;
+			}
+			.back-to-top__icon {
+				position: relative;
+				z-index: 2;
+				display: flex;
 			}
 			.back-to-top__circle-bg, .back-to-top__circle-progress {
 				stroke: #ff2d55;
