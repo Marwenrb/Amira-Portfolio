@@ -399,6 +399,43 @@
 			.js .loading::before, .js .loading::after {
 				display: none !important;
 			}
+			
+			@media screen and (max-width: 768px) {
+				.frame__title {
+					flex-direction: column;
+					align-items: center;
+					gap: 12px;
+					width: 100%;
+					justify-content: center;
+				}
+				.frame__title-main {
+					font-size: 0.85rem;
+					text-align: center;
+				}
+				.lang-switcher {
+					margin: 0 auto;
+				}
+				.lang-switcher__dropdown {
+					right: 50%;
+					transform: translateX(50%) translateY(-10px) scale(0.95);
+					transform-origin: top center;
+				}
+				.lang-switcher.is-open .lang-switcher__dropdown {
+					transform: translateX(50%) translateY(0) scale(1);
+				}
+				body.rtl .lang-switcher__dropdown {
+					left: 50%;
+					right: auto;
+					transform: translateX(-50%) translateY(-10px) scale(0.95);
+				}
+				body.rtl .lang-switcher.is-open .lang-switcher__dropdown {
+					transform: translateX(-50%) translateY(0) scale(1);
+				}
+				.back-to-top {
+					right: 15px;
+					bottom: 25px; /* lower it slightly on mobile for better thumb reach */
+				}
+			}
 		</style>
 	</head>
 	<body class="demo-1 loading">
