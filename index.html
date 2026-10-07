@@ -433,7 +433,7 @@
 				}
 				.back-to-top {
 					right: 15px;
-					bottom: 25px; /* lower it slightly on mobile for better thumb reach */
+					bottom: calc(75px + env(safe-area-inset-bottom, 0px)); /* Safe distance for mobile browser navigation bars */
 				}
 			}
 		</style>
