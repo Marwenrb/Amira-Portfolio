@@ -1,0 +1,161 @@
+{
+  "fr": {
+    "title": "Portfolio d'Amira Nawali (Amoura)",
+    "description": "Portfolio professionnel d'Amira Nawali (Amoura), fière maman de Mariem et Jihed.",
+    "keywords": "Amira Nawali, Amoura, Portfolio, Mariem, Jihed, Créative, Premium",
+    "header": "Amira Nawali (Amoura) - Portfolio Personnel",
+    "backToArticle": "Retour à l'article",
+    "previousDemo": "Démo précédente",
+    "navigation": {
+      "home": "Accueil",
+      "about": "À propos",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "footer": {
+      "copyright": "© 2026 Amira Nawali. Tous droits réservés.",
+      "madeWith": "Fait avec",
+      "by": "par"
+    },
+    "sections": {
+      "aboutMe": {
+        "title": "À Propos",
+        "content": "Bonjour ! Je suis Amira Nawali, affectueusement surnommée Amoura. En tant que fière maman de deux enfants merveilleux, Mariem et Jihed, je puise ma créativité dans l'amour de ma famille et ma passion pour la vie."
+      },
+      "skills": {
+        "title": "Passion",
+        "content": "La vie avec Mariem et Jihed m'a appris la patience, l'organisation et une créativité sans limites. Mon approche est toujours pleine de chaleur, de dévouement et d'une volonté de toujours donner le meilleur de moi-même."
+      },
+      "projects": {
+        "title": "Moments",
+        "content": "Chaque jour est un nouveau projet. Qu'il s'agisse de créer des souvenirs inoubliables avec mes enfants ou de relever de nouveaux défis, j'aborde chaque moment de ma vie avec passion, amour et une touche d'excellence."
+      },
+      "experience": {
+        "title": "Expérience",
+        "content": "Mon parcours est riche en expériences diverses, mais mon rôle le plus gratifiant est celui de mère. L'équilibre entre ma vie personnelle et mes aspirations m'a dotée d'une vision unique, empathique et profondément humaine."
+      },
+      "education": {
+        "title": "Inspiration",
+        "content": "Je trouve mon inspiration dans les petites choses de la vie. Mariem et Jihed sont ma plus grande source de motivation, me poussant toujours à explorer de nouveaux horizons et à apprendre chaque jour."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "Je suis toujours ouverte à de nouvelles rencontres, à des échanges inspirants et à des collaborations. N'hésitez pas à me contacter ou à me suivre sur mes réseaux sociaux, j'adorerais échanger avec vous."
+      },
+      "vision": {
+        "title": "Vision",
+        "content": "Ma vision est de construire un avenir radieux et rempli d'amour, non seulement pour Mariem et Jihed, mais aussi pour les personnes qui croisent mon chemin. J'aspire à diffuser la joie, la créativité et la positivité partout où je vais."
+      },
+      "future": {
+        "title": "Avenir",
+        "content": "L'avenir est prometteur et rempli de possibilités infinies. Avec mes enfants à mes côtés et une détermination inébranlable, je suis prête à embrasser tout ce que la vie a à offrir avec grâce, confiance et un sourire radieux."
+      }
+    }
+  },
+  "en": {
+    "title": "Portfolio of Amira Nawali (Amoura)",
+    "description": "Professional portfolio of Amira Nawali (Amoura), proud mother of Mariem and Jihed.",
+    "keywords": "Amira Nawali, Amoura, Portfolio, Mariem, Jihed, Creative, Premium",
+    "header": "Amira Nawali (Amoura) - Personal Portfolio",
+    "backToArticle": "Back to the article",
+    "previousDemo": "Previous demo",
+    "navigation": {
+      "home": "Home",
+      "about": "About me",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "footer": {
+      "copyright": "© 2026 Amira Nawali. All rights reserved.",
+      "madeWith": "Made with",
+      "by": "by"
+    },
+    "sections": {
+      "aboutMe": {
+        "title": "About Me",
+        "content": "Hello! I am Amira Nawali, affectionately known as Amoura. As a proud mother of two wonderful children, Mariem and Jihed, I draw my creativity from the love of my family and my passion for life."
+      },
+      "skills": {
+        "title": "Passion",
+        "content": "Life with Mariem and Jihed has taught me patience, organization, and boundless creativity. My approach is always filled with warmth, dedication, and a commitment to always give my absolute best."
+      },
+      "projects": {
+        "title": "Moments",
+        "content": "Every day is a new project. Whether it's creating unforgettable memories with my children or taking on new challenges, I approach every moment of my life with passion, love, and a touch of excellence."
+      },
+      "experience": {
+        "title": "Experience",
+        "content": "My journey is rich in diverse experiences, but my most rewarding role is being a mother. Balancing my personal life and aspirations has equipped me with a unique, empathetic, and profoundly human perspective."
+      },
+      "education": {
+        "title": "Inspiration",
+        "content": "I find my inspiration in the little things in life. Mariem and Jihed are my greatest source of motivation, constantly pushing me to explore new horizons and learn something new every single day."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "I am always open to new connections, inspiring conversations, and collaborations. Feel free to reach out to me or follow my journey on social media—I'd love to connect with you."
+      },
+      "vision": {
+        "title": "Vision",
+        "content": "My vision is to build a bright and love-filled future, not only for Mariem and Jihed but for everyone who crosses my path. I aspire to spread joy, creativity, and positivity wherever I go."
+      },
+      "future": {
+        "title": "Future",
+        "content": "The future is bright and full of endless possibilities. With my children by my side and an unwavering determination, I am ready to embrace all that life has to offer with grace, confidence, and a radiant smile."
+      }
+    }
+  },
+  "ar": {
+    "title": "معرض أعمال أميرة نوالي (أمورة)",
+    "description": "المعرض الشخصي لأميرة نوالي (أمورة)، الأم الفخورة لمريم وجهاد.",
+    "keywords": "أميرة نوالي، أمورة، معرض أعمال، مريم، جهاد، إبداع، فخامة",
+    "header": "أميرة نوالي (أمورة) - معرض أعمال شخصي",
+    "backToArticle": "العودة إلى المقال",
+    "previousDemo": "العرض السابق",
+    "navigation": {
+      "home": "الرئيسية",
+      "about": "نبذة عني",
+      "portfolio": "أعمالي",
+      "contact": "اتصل بي"
+    },
+    "footer": {
+      "copyright": "© 2026 أميرة نوالي. جميع الحقوق محفوظة.",
+      "madeWith": "صنع بـ",
+      "by": "بواسطة"
+    },
+    "sections": {
+      "aboutMe": {
+        "title": "نبذة عني",
+        "content": "مرحباً! أنا أميرة نوالي، والمعروفة بحب باسم أمورة. بصفتي أماً فخورة لطفلين رائعين، مريم وجهاد، أستمد إبداعي من حب عائلتي وشغفي بالحياة."
+      },
+      "skills": {
+        "title": "الشغف",
+        "content": "علمتني الحياة مع مريم وجهاد الصبر والتنظيم والإبداع اللامحدود. يتميز أسلوبي دائمًا بالدفء والتفاني والالتزام بتقديم أفضل ما لدي دائمًا."
+      },
+      "projects": {
+        "title": "لحظات",
+        "content": "كل يوم هو مشروع جديد. سواء كان ذلك في صنع ذكريات لا تُنسى مع أطفالي أو مواجهة تحديات جديدة، فإنني أتعامل مع كل لحظة من حياتي بشغف وحب ولمسة من التميز."
+      },
+      "experience": {
+        "title": "الخبرات",
+        "content": "رحلتي غنية بتجارب متنوعة، لكن دوري الأهم والأكثر مكافأة هو كوني أم. لقد منحني التوازن بين حياتي الشخصية وتطلعاتي منظورًا فريدًا وعاطفيًا وإنسانيًا بعمق."
+      },
+      "education": {
+        "title": "الإلهام",
+        "content": "أجد إلهامي في الأشياء الصغيرة في الحياة. مريم وجهاد هما أكبر مصدر تحفيز لي، حيث يدفعانني باستمرار لاستكشاف آفاق جديدة وتعلم شيء جديد كل يوم."
+      },
+      "contact": {
+        "title": "التواصل",
+        "content": "أرحب دائمًا بالتواصل الجديد والمحادثات الملهمة وفرص التعاون. لا تتردد في التواصل معي أو متابعة رحلتي على وسائل التواصل الاجتماعي - يسعدني أن أتواصل معك."
+      },
+      "vision": {
+        "title": "الرؤية",
+        "content": "رؤيتي هي بناء مستقبل مشرق مليء بالحب، ليس فقط لمريم وجهاد، بل لكل من يعبر طريقي. أطمح لنشر الفرح والإبداع والإيجابية أينما ذهبت."
+      },
+      "future": {
+        "title": "المستقبل",
+        "content": "المستقبل مشرق ومليء بالاحتمالات اللانهائية. مع وجود أطفالي بجانبي وعزيمتي التي لا تتزعزع، أنا مستعدة لاحتضان كل ما تقدمه الحياة بنعمة وثقة وابتسامة مشرقة."
+      }
+    }
+  }
+}

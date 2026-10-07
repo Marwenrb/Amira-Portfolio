@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Portfolio d'Amira Nawali (Amoura)</title>
+		<meta name="description" content="Portfolio professionnel d'Amira Nawali (Amoura), fière maman de Mariem et Jihed." />
+		<meta name="keywords" content="Amira Nawali, Amoura, Portfolio, Mariem, Jihed, Créative, Premium" />
+		<meta name="author" content="Amira Nawali" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://use.typekit.net/tcc0udb.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/rtl.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<style>
+			/* Language switcher styles */
+			.lang-switcher {
+				display: flex;
+				gap: 10px;
+				margin-left: auto;
+				align-items: center;
+			}
+			
+			.lang-switch {
+				cursor: pointer;
+				opacity: 0.6;
+				transition: opacity 0.3s;
+				text-transform: uppercase;
+				font-size: 14px;
+				background: none;
+				border: none;
+				color: inherit;
+				padding: 5px;
+			}
+			
+			.lang-switch.active {
+				opacity: 1;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+			
+			/* RTL support for Arabic */
+			.rtl {
+				direction: rtl;
+				text-align: right;
+			}
+			
+			.rtl .frame__title {
+				flex-direction: row-reverse;
+			}
+			
+			.rtl .lang-switcher {
+				margin-right: auto;
+				margin-left: 0;
+			}
+
+			/* Premium Apple Feminine Theme - Ultra Catchy Pink */
+			:root {
+				--color-text: #1c000b;
+				--color-bg: #fff0f5; /* Soft pastel pink */
+				--color-link: #ff2d55; /* Apple bright pink */
+				--color-link-hover: #ff375f;
+			}
+
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+				text-transform: none; /* Natural casing for elegant readability */
+			}
+
+			.frame__title-main {
+				font-weight: 500;
+				letter-spacing: -0.01em;
+				color: #1d1d1f;
+				text-shadow: none;
+				background: rgba(255, 255, 255, 0.8);
+				padding: 8px 16px;
+				border-radius: 12px;
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+				border: 1px solid rgba(255,255,255,0.5);
+			}
+
+			.language-toggle {
+				background: rgba(255, 255, 255, 0.8);
+				border-radius: 12px;
+				padding: 5px;
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+				border: 1px solid rgba(255,255,255,0.5);
+			}
+			
+			.language-toggle__active-lang, .language-toggle__option-text {
+				color: #1d1d1f !important;
+			}
+
+			.premium-footer {
+				background: rgba(253, 251, 251, 0.9);
+				backdrop-filter: blur(20px);
+				-webkit-backdrop-filter: blur(20px);
+				border-top: 1px solid rgba(216, 150, 163, 0.3);
+				color: #1d1d1f;
+			}
+			
+			.premium-footer::before {
+				background: linear-gradient(90deg, transparent, #d896a3, transparent);
+			}
+
+			.footer-nav-link, .footer-text, .creator-signature__text, .footer-link {
+				color: #1d1d1f !important;
+			}
+			
+			.social-link {
+				background: rgba(216, 150, 163, 0.1) !important;
+			}
+
+			.social-link svg {
+				stroke: #1d1d1f !important;
+			}
+
+			.social-link:hover {
+				background: rgba(216, 150, 163, 0.25) !important;
+			}
+
+			.canvas-wrap::after {
+				content: '';
+				position: absolute;
+				top: 0; left: 0; right: 0; bottom: 0;
+				background: linear-gradient(135deg, rgba(255, 230, 240, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+				pointer-events: none;
+			}
+
+			h2 {
+				color: #1c000b;
+				text-shadow: none;
+				font-weight: 300;
+				letter-spacing: -0.03em;
+			}
+
+			p {
+				color: #1c000b;
+				text-shadow: none;
+				font-size: 1.15rem;
+				line-height: 1.6;
+				background: rgba(255, 255, 255, 0.75);
+				padding: 25px;
+				border-radius: 18px;
+				backdrop-filter: blur(20px);
+				-webkit-backdrop-filter: blur(20px);
+				border: 1px solid rgba(255,255,255,0.6);
+				box-shadow: 0 10px 30px rgba(216, 150, 163, 0.15);
+				font-weight: 400;
+				letter-spacing: 0.01em;
+			}
+
+			.deco {
+				stroke: rgba(216, 150, 163, 0.6); /* Rose gold accent */
+			}
+			
+			.logo-svg circle, .logo-svg path {
+				stroke: #d896a3 !important;
+			}
+			.logo-svg circle[fill] {
+				fill: #d896a3 !important;
+			}
+			
+			.back-to-top {
+				background: rgba(255, 255, 255, 0.8);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(216, 150, 163, 0.3);
+			}
+			.back-to-top__circle-bg, .back-to-top__circle-progress {
+				stroke: #ff2d55;
+			}
+			.back-to-top__icon svg path {
+				stroke: #1c000b;
+			}
+
+			/* Next-Level UI/UX Premium Apple Loader */
+			.js .loading::before {
+				background: #fff0f5; /* Match bg */
+			}
+			.js .loading::after {
+				content: '';
+				position: fixed;
+				z-index: 1000;
+				top: 50%;
+				left: 50%;
+				width: 50px;
+				height: 50px;
+				margin: -25px 0 0 -25px;
+				background: transparent;
+				border: 3px solid rgba(255, 45, 85, 0.2);
+				border-top-color: #ff2d55;
+				border-radius: 50%;
+				animation: spinLoader 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+				opacity: 1;
+				box-shadow: 0 0 20px rgba(255, 45, 85, 0.3);
+			}
+
+			@keyframes spinLoader {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+		</style>
+	</head>
+	<body class="demo-1 loading">
+		<main>
+			<div class="frame">
+				<div class="frame__title"> 
+					<h1 class="frame__title-main">Amira Nawali (Amoura) - Portfolio Personnel</h1> 
+					<div class="language-toggle">
+						<div class="language-toggle__button">
+							<div class="language-toggle__orb">
+								<div class="language-toggle__orb-inner">
+									<span class="language-toggle__active-lang">FR</span>
+								</div>
+							</div>
+							<div class="language-toggle__languages">
+								<div class="language-toggle__option" data-lang="fr">
+									<div class="language-toggle__option-highlight"></div>
+									<span class="language-toggle__option-text">FR</span>
+								</div>
+								<div class="language-toggle__option" data-lang="en">
+									<div class="language-toggle__option-highlight"></div>
+									<span class="language-toggle__option-text">EN</span>
+								</div>
+								<div class="language-toggle__option" data-lang="ar">
+									<div class="language-toggle__option-highlight"></div>
+									<span class="language-toggle__option-text">AR</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<svg viewBox="955.38 368 268.62 271" width="268.62" height="271" class="deco"><path vector-effect="non-scaling-stroke" d=" M975.38 472 L1050.38 472 C1050.38 472, 1060.38 472, 1060.38 462 L1060.38 388 C1060.38 388, 1060.38 378, 1070.38 378 L1181.6200000000001 378 C1181.6200000000001 378, 1191.6200000000001 378, 1191.6200000000001 388 L1191.6200000000001 478 C1191.6200000000001 478, 1191.6200000000001 488, 1181.6200000000001 488 L1106.62 488 C1106.62 488, 1096.62 488, 1096.62 498 L1096.62 509 C1096.62 509, 1096.62 519, 1106.62 519 L1204 519 C1204 519, 1214 519, 1214 529 L1214 619 C1214 619, 1214 629, 1204 629 L1024 629 C1024 629, 1014 629, 1014 619 L1014 592 C1014 592, 1014 582, 1004 582 L975.38 582 C975.38 582, 965.38 582, 965.38 572 L965.38 482 C965.38 482, 965.38 472, 975.38 472"></path></svg>
+			<section class="content">
+				<div class="canvas-wrap" style="background-image:url('img/toff/IMG-20260911-WA0008.jpg')"></div>
+				<div class="content__inner">
+					<h2>
+						<span>À</span><br>
+						<span>P</span><span>r</span><span>o</span><span>p</span><span>o</span><span>s</span>
+					</h2>
+					<p>Bonjour ! Je suis Amira Nawali, affectueusement surnommée Amoura. En tant que fière maman de deux enfants merveilleux, Mariem et Jihed, je puise ma créativité dans l'amour de ma famille et ma passion pour la vie.</p>
+				</div>
+			</section>
+			<section class="content">
+				<div class="canvas-wrap" style="background-image:url('img/toff/IMG-20260915-WA0002.jpg')"></div>
+				<div class="content__inner">
+					<h2>
+						<span>P</span><span>a</span><span>s</span><span>s</span><br>
+						<span>i</span><span>o</span><span>n</span>
+					</h2>
+					<p>La vie avec Mariem et Jihed m'a appris la patience, l'organisation et une créativité sans limites. Mon approche est toujours pleine de chaleur, de dévouement et d'une volonté de toujours donner le meilleur de moi-même.</p>
+				</div>
+			</section>
+			<section class="content">
+				<div class="canvas-wrap" style="background-image:url('img/toff/Messenger_creation_0F770A03-22C8-4CF6-943C-F900A1E933A0.png')"></div>
+				<div class="content__inner">
+					<h2>
+						<span>M</span><span>o</span><span>m</span><span>e</span><br>
+						<span>n</span><span>t</span><span>s</span>
+					</h2>
+					<p>Chaque jour est un nouveau projet. Qu'il s'agisse de créer des souvenirs inoubliables avec mes enfants ou de relever de nouveaux défis, j'aborde chaque moment de ma vie avec passion, amour et une touche d'excellence.</p>
+				</div>
+			</section>
+			<section class="content">
+				<div class="canvas-wrap" style="background-image:url('img/toff/Messenger_creation_6EE2DEE3-73DD-4C4E-9415-BFE00B7E6CA3.jpeg')"></div>
+				<div class="content__inner">
+					<h2>
+						<span>E</span><span>x</span><span>p</span><span>é</span><span>r</span><br>
+						<span>i</span><span>e</span><span>n</span><span>c</span><span>e</span>
+					</h2>
+					<p>Mon parcours est riche en expériences diverses, mais mon rôle le plus gratifiant est celui de mère. L'équilibre entre ma vie personnelle et mes aspirations m'a dotée d'une vision unique, empathique et profondément humaine.</p>
+				</div>
+			</section>
+			<section class="content">
+				<div class="canvas-wrap" style="background-image:url('img/toff/Messenger_creation_8B874C2E-8001-4AB1-8AE6-C96A6791F0C4.jpeg')"></div>
+				<div class="content__inner">
+					<h2>
+						<span>I</span><span>n</span><span>s</span><span>p</span><span>i</span><br>
+						<span>r</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span>
+					</h2>
+					<p>Je trouve mon inspiration dans les petites choses de la vie. Mariem et Jihed sont ma plus grande source de motivation, me poussant toujours à explorer de nouveaux horizons et à apprendre chaque jour.</p>
+				</div>
+			</section>
+			<section class="content">
+				<div class="canvas-wrap" style="background-image:url('img/toff/Messenger_creation_CC2718BD-5615-4452-AB1D-E5A4A367E9F7.jpeg')"></div>
+				<div class="content__inner">
+					<h2>
+						<span>C</span><span>o</span><span>n</span><span>t</span><br>
+						<span>a</span><span>c</span><span>t</span>
+					</h2>
+					<p>Je suis toujours ouverte à de nouvelles rencontres, à des échanges inspirants et à des collaborations. N'hésitez pas à me contacter ou à me suivre sur mes réseaux sociaux, j'adorerais échanger avec vous.</p>
+					<div class="contact-links">
+						<a href="https://www.facebook.com/share/18v1pDy6yd/" target="_blank" rel="noopener" class="contact-link facebook-link" style="display:inline-flex; align-items:center; gap:8px; margin-top:20px; font-weight:bold; color:var(--color-link); text-decoration:none;">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<span>Mon Profil Facebook</span>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="content">
+				<div class="canvas-wrap" style="background-image:url('img/toff/IMG-20260911-WA0008.jpg')"></div>
+				<div class="content__inner">
+					<h2>
+						<span>V</span><span>i</span><span>s</span><span>i</span><br>
+						<span>o</span><span>n</span>
+					</h2>
+					<p>Ma vision est de construire un avenir radieux et rempli d'amour, non seulement pour Mariem et Jihed, mais aussi pour les personnes qui croisent mon chemin. J'aspire à diffuser la joie, la créativité et la positivité partout où je vais.</p>
+				</div>
+			</section>
+			<section class="content">
+				<div class="canvas-wrap" style="background-image:url('img/toff/IMG-20260915-WA0002.jpg')"></div>
+				<div class="content__inner">
+					<h2>
+						<span>A</span><span>v</span><span>e</span><br>
+						<span>n</span><span>i</span><span>r</span>
+					</h2>
+					<p>L'avenir est prometteur et rempli de possibilités infinies. Avec mes enfants à mes côtés et une détermination inébranlable, je suis prête à embrasser tout ce que la vie a à offrir avec grâce, confiance et un sourire radieux.</p>
+				</div>
+			</section>
+		</main>
+		
+		<!-- Premium Futuristic Footer -->
+		<footer class="premium-footer">
+			<div class="footer-container">
+				<div class="footer-top">
+					<div class="footer-logo">
+						<svg class="logo-svg" viewBox="0 0 100 100" width="60" height="60">
+							<circle cx="50" cy="50" r="40" fill="none" stroke="var(--color-link)" stroke-width="2" />
+							<path d="M30,50 L45,35 L55,45 L70,30" fill="none" stroke="var(--color-link)" stroke-width="2" stroke-linecap="round" />
+							<circle cx="30" cy="50" r="3" fill="var(--color-link)" />
+							<circle cx="45" cy="35" r="3" fill="var(--color-link)" />
+							<circle cx="55" cy="45" r="3" fill="var(--color-link)" />
+							<circle cx="70" cy="30" r="3" fill="var(--color-link)" />
+						</svg>
+					</div>
+					<div class="footer-nav">
+						<ul>
+							<li><a href="#" class="footer-nav-link" data-lang-key="navigation.home">Accueil</a></li>
+							<li><a href="#" class="footer-nav-link" data-lang-key="navigation.about">À propos</a></li>
+							<li><a href="#" class="footer-nav-link" data-lang-key="navigation.portfolio">Portfolio</a></li>
+							<li><a href="#" class="footer-nav-link" data-lang-key="navigation.contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-middle">
+					<div class="social-links">
+						<a href="https://www.facebook.com/share/18v1pDy6yd/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</a>
+						<a href="#" class="social-link" aria-label="Instagram">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7615 8.09207 10.9099 8.47033 10.1584C8.84859 9.40685 9.45419 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.1283C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M17.5 6.5H17.51" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="footer-copyright">
+						<p class="footer-text" data-lang-key="footer.copyright">© 2026 Amira Nawali. Tous droits réservés.</p>
+					</div>
+					<div class="creator-signature">
+						<span class="creator-signature__text" data-lang-key="footer.madeWith">Fait avec</span>
+						<span class="creator-signature__heart">❤</span>
+						<span class="creator-signature__text" data-lang-key="footer.by">par</span>
+						<a href="http://marwenrabai.com" target="_blank" rel="noopener" class="creator-signature__link">Marwen</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Back to Top Button -->
+		<button class="back-to-top" aria-label="Back to top">
+			<svg class="back-to-top__circle" width="50" height="50" viewBox="0 0 50 50">
+				<circle class="back-to-top__circle-bg" cx="25" cy="25" r="23" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"></circle>
+				<circle class="back-to-top__circle-progress" cx="25" cy="25" r="23" fill="none" stroke="white" stroke-width="2" stroke-dasharray="144.51326206513048" stroke-dashoffset="144.51326206513048"></circle>
+			</svg>
+			<div class="back-to-top__icon">
+				<svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
+		</button>
+		
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/gsap.min.js"></script>
+		<script src="js/ScrollTrigger.min.js"></script>
+		<script src="js/lenis.min.js"></script>
+		<script type="module" src="js/index.js"></script>
+	</body>
+</html>
