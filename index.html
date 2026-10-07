@@ -79,57 +79,118 @@
 				--color-link-hover: #ff375f;
 			}
 
-			/* Ultra Professional Language Switcher */
-			.language-toggle__button {
-				width: 44px !important;
-				overflow: hidden;
-				transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
-				justify-content: flex-start !important;
-			}
-			.language-toggle__button:hover,
-			.language-toggle__button.is-open {
-				width: 130px !important;
+			/* Ultra Premium Apple-like Language Switcher */
+			.lang-switcher {
+				position: relative;
+				margin-left: auto;
+				z-index: 1000;
+				font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 			}
 			
-			/* Keep orb always on the left */
-			.language-toggle__orb {
-				transform: translateX(0) !important;
-				position: relative !important;
-				flex-shrink: 0;
-			}
-			
-			/* Make the options flow horizontally */
-			.language-toggle__languages {
-				position: relative !important;
-				left: auto !important;
-				top: auto !important;
-				width: auto !important;
-				display: flex !important;
+			.lang-switcher__btn {
+				display: flex;
 				align-items: center;
-				justify-content: flex-start !important;
-				gap: 15px;
-				padding-left: 10px !important;
+				gap: 8px;
+				background: rgba(255, 255, 255, 0.6);
+				border: 1px solid rgba(255, 255, 255, 0.8);
+				box-shadow: 0 4px 15px rgba(255, 45, 85, 0.1);
+				backdrop-filter: blur(20px);
+				-webkit-backdrop-filter: blur(20px);
+				padding: 8px 16px;
+				border-radius: 30px;
+				color: #1c000b;
+				font-size: 14px;
+				font-weight: 600;
+				cursor: pointer;
+				transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+			}
+			
+			.lang-switcher__btn:hover, .lang-switcher.is-open .lang-switcher__btn {
+				background: rgba(255, 255, 255, 0.95);
+				box-shadow: 0 6px 20px rgba(255, 45, 85, 0.2);
+				transform: translateY(-2px);
+			}
+			
+			.lang-switcher__icon {
+				width: 16px;
+				height: 16px;
+				color: #ff2d55;
+			}
+			
+			.lang-switcher__chevron {
+				width: 14px;
+				height: 14px;
+				transition: transform 0.3s ease;
+				opacity: 0.6;
+			}
+			
+			.lang-switcher.is-open .lang-switcher__chevron {
+				transform: rotate(180deg);
+			}
+			
+			.lang-switcher__dropdown {
+				position: absolute;
+				top: calc(100% + 10px);
+				right: 0;
+				background: rgba(255, 255, 255, 0.85);
+				backdrop-filter: blur(25px);
+				-webkit-backdrop-filter: blur(25px);
+				border: 1px solid rgba(255, 255, 255, 0.9);
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 45, 85, 0.05);
+				border-radius: 16px;
+				padding: 8px;
+				min-width: 150px;
 				opacity: 0;
-				pointer-events: none !important;
-				transition: opacity 0.3s ease;
+				visibility: hidden;
+				transform: translateY(-10px) scale(0.95);
+				transform-origin: top right;
+				transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+				pointer-events: none;
 			}
 			
-			.language-toggle__button:hover .language-toggle__languages,
-			.language-toggle__button.is-open .language-toggle__languages {
+			.lang-switcher.is-open .lang-switcher__dropdown {
 				opacity: 1;
-				pointer-events: auto !important;
+				visibility: visible;
+				transform: translateY(0) scale(1);
+				pointer-events: auto;
 			}
 			
-			/* Hide the currently active language from the rest of the list */
-			.language-toggle.lang-fr .language-toggle__option[data-lang="fr"],
-			.language-toggle.lang-en .language-toggle__option[data-lang="en"],
-			.language-toggle.lang-ar .language-toggle__option[data-lang="ar"] {
-				display: none !important;
+			.lang-switcher__option {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				padding: 10px 14px;
+				background: transparent;
+				border: none;
+				border-radius: 10px;
+				color: #1c000b;
+				font-size: 13px;
+				font-weight: 500;
+				cursor: pointer;
+				transition: all 0.2s ease;
+				text-align: left;
 			}
 			
-			/* Ensure option text is visible */
-			.language-toggle__option-text {
-				opacity: 1 !important;
+			.lang-switcher__option:hover {
+				background: rgba(255, 45, 85, 0.08);
+				color: #ff2d55;
+			}
+			
+			.lang-switcher__option.active {
+				background: rgba(255, 45, 85, 0.12);
+				color: #ff2d55;
+				font-weight: 700;
+			}
+			
+			body.rtl .lang-switcher {
+				margin-left: 0;
+				margin-right: auto;
+			}
+			body.rtl .lang-switcher__dropdown {
+				right: auto;
+				left: 0;
+				transform-origin: top left;
 			}
 
 			body {
@@ -349,27 +410,16 @@
 			<div class="frame">
 				<div class="frame__title"> 
 					<h1 class="frame__title-main">Amira Nawali (Amoura) - Portfolio Personnel</h1> 
-					<div class="language-toggle">
-						<div class="language-toggle__button">
-							<div class="language-toggle__orb">
-								<div class="language-toggle__orb-inner">
-									<span class="language-toggle__active-lang">FR</span>
-								</div>
-							</div>
-							<div class="language-toggle__languages">
-								<div class="language-toggle__option" data-lang="fr">
-									<div class="language-toggle__option-highlight"></div>
-									<span class="language-toggle__option-text">FR</span>
-								</div>
-								<div class="language-toggle__option" data-lang="en">
-									<div class="language-toggle__option-highlight"></div>
-									<span class="language-toggle__option-text">EN</span>
-								</div>
-								<div class="language-toggle__option" data-lang="ar">
-									<div class="language-toggle__option-highlight"></div>
-									<span class="language-toggle__option-text">AR</span>
-								</div>
-							</div>
+					<div class="lang-switcher" id="lang-switcher">
+						<button class="lang-switcher__btn" aria-label="Changer de langue">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="lang-switcher__icon"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+							<span class="lang-switcher__current">FR</span>
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="lang-switcher__chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+						</button>
+						<div class="lang-switcher__dropdown">
+							<button class="lang-switcher__option active" data-lang="fr">Français (FR)</button>
+							<button class="lang-switcher__option" data-lang="en">English (EN)</button>
+							<button class="lang-switcher__option" data-lang="ar">العربية (AR)</button>
 						</div>
 					</div>
 				</div>
@@ -535,6 +585,6 @@
 		<script src="js/gsap.min.js"></script>
 		<script src="js/ScrollTrigger.min.js"></script>
 		<script src="js/lenis.min.js"></script>
-		<script type="module" src="js/index.js?v=2"></script>
+		<script type="module" src="js/index.js?v=3"></script>
 	</body>
 </html>

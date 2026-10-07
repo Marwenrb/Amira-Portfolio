@@ -60,63 +60,65 @@ const LanguageSwitcher = {
     
     // Initialize the language toggle
     initLanguageToggle: function() {
-        const toggle = document.querySelector('.language-toggle');
+        const toggle = document.getElementById('lang-switcher');
         if (!toggle) return;
         
-        // Set active language class (clearing previous to prevent duplicates)
-        toggle.classList.remove('lang-fr', 'lang-en', 'lang-ar');
-        toggle.classList.add(`lang-${this.currentLang}`);
+        const btn = toggle.querySelector('.lang-switcher__btn');
+        const currentSpan = toggle.querySelector('.lang-switcher__current');
+        const options = toggle.querySelectorAll('.lang-switcher__option');
         
-        // Update active language display
-        const activeLabel = toggle.querySelector('.language-toggle__active-lang');
-        if (activeLabel) {
-            activeLabel.textContent = this.currentLang.toUpperCase();
+        // Setup initial state
+        if (currentSpan) {
+            currentSpan.textContent = this.currentLang.toUpperCase();
         }
         
-        // Make the entire button clickable (for mobile devices)
-        const button = toggle.querySelector('.language-toggle__button');
-        if (button) {
-            button.addEventListener('click', (e) => {
+        options.forEach(opt => {
+            if (opt.getAttribute('data-lang') === this.currentLang) {
+                opt.classList.add('active');
+            } else {
+                opt.classList.remove('active');
+            }
+        });
+        
+        // Toggle dropdown on button click
+        if (btn) {
+            btn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                button.classList.toggle('is-open');
+                toggle.classList.toggle('is-open');
             });
             
             // Close when clicking anywhere else
             document.addEventListener('click', () => {
-                button.classList.remove('is-open');
+                toggle.classList.remove('is-open');
             });
         }
         
-        // Set up event listeners for language options
-        const options = toggle.querySelectorAll('.language-toggle__option');
+        // Handle language option clicks
         options.forEach(option => {
             option.addEventListener('click', (e) => {
-                e.stopPropagation(); // Prevent event bubbling
+                e.stopPropagation();
                 
-                // Close the dropdown explicitly on mobile
-                if (button) button.classList.remove('is-open');
+                // Close dropdown
+                toggle.classList.remove('is-open');
                 
                 const lang = option.getAttribute('data-lang');
-                
-                // Don't do anything if clicking the current language
                 if (lang === this.currentLang) return;
                 
                 // Switch language
                 this.switchLanguage(lang);
                 
-                // Update UI
-                toggle.classList.remove('lang-fr', 'lang-en', 'lang-ar');
-                toggle.classList.add(`lang-${lang}`);
-                
-                if (activeLabel) {
-                    activeLabel.textContent = lang.toUpperCase();
+                // Update UI immediately
+                if (currentSpan) {
+                    currentSpan.textContent = lang.toUpperCase();
                 }
+                
+                options.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
                 
                 // Add transition effect to content
                 document.querySelectorAll('.content__inner').forEach(element => {
                     element.classList.remove('lang-change-animation');
-                    // Force reflow
-                    void element.offsetWidth;
+                    void element.offsetWidth; // Force reflow
                     element.classList.add('lang-change-animation');
                 });
             });
