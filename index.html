@@ -7,7 +7,24 @@
 		<meta name="description" content="Portfolio professionnel d'Amira Nawali (Amoura), fière maman de Mariem et Jihed." />
 		<meta name="keywords" content="Amira Nawali, Amoura, Portfolio, Mariem, Jihed, Créative, Premium" />
 		<meta name="author" content="Amira Nawali" />
-		<link rel="shortcut icon" href="favicon.ico">
+		
+		<!-- Perfect Professional Sharing & Browser Icons -->
+		<link rel="icon" href="img/toff/IMG-20260911-WA0008.jpg" type="image/jpeg">
+		<link rel="apple-touch-icon" href="img/toff/IMG-20260911-WA0008.jpg">
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://amira-portfolio.netlify.app/">
+		<meta property="og:title" content="Portfolio d'Amira Nawali (Amoura)">
+		<meta property="og:description" content="Portfolio professionnel d'Amira Nawali (Amoura), fière maman de Mariem et Jihed.">
+		<meta property="og:image" content="https://raw.githubusercontent.com/Marwenrb/Amira-Portfolio/main/img/toff/IMG-20260911-WA0008.jpg">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:title" content="Portfolio d'Amira Nawali (Amoura)">
+		<meta property="twitter:description" content="Portfolio professionnel d'Amira Nawali (Amoura), fière maman de Mariem et Jihed.">
+		<meta property="twitter:image" content="https://raw.githubusercontent.com/Marwenrb/Amira-Portfolio/main/img/toff/IMG-20260911-WA0008.jpg">
+
 		<link rel="stylesheet" href="https://use.typekit.net/tcc0udb.css">
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<link rel="stylesheet" type="text/css" href="css/rtl.css" />
@@ -60,6 +77,25 @@
 				--color-bg: #fff0f5; /* Soft pastel pink */
 				--color-link: #ff2d55; /* Apple bright pink */
 				--color-link-hover: #ff375f;
+			}
+
+			/* Show only selected language by default, expand on hover */
+			.language-toggle__button {
+				width: 44px !important;
+				overflow: hidden;
+				transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+			}
+			.language-toggle__button:hover {
+				width: 110px !important;
+			}
+			.language-toggle__languages {
+				opacity: 0;
+				transition: opacity 0.3s ease;
+				transition-delay: 0s;
+			}
+			.language-toggle__button:hover .language-toggle__languages {
+				opacity: 1;
+				transition-delay: 0.15s;
 			}
 
 			body {
@@ -185,21 +221,40 @@
 				z-index: 1000;
 				top: 50%;
 				left: 50%;
-				width: 50px;
-				height: 50px;
-				margin: -25px 0 0 -25px;
+				width: 60px;
+				height: 60px;
+				margin: -30px 0 0 -30px;
 				background: transparent;
-				border: 3px solid rgba(255, 45, 85, 0.2);
-				border-top-color: #ff2d55;
+				border: 2px solid rgba(255, 45, 85, 0.15);
 				border-radius: 50%;
-				animation: spinLoader 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+				animation: pulseLoader 2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
 				opacity: 1;
-				box-shadow: 0 0 20px rgba(255, 45, 85, 0.3);
+			}
+			
+			/* Adding an inner dot for the loader */
+			.js .loading::before {
+				content: '';
+				position: fixed;
+				z-index: 1001;
+				top: 50%;
+				left: 50%;
+				width: 12px;
+				height: 12px;
+				margin: -6px 0 0 -6px;
+				background: #ff2d55;
+				border-radius: 50%;
+				animation: innerDot 2s ease-in-out infinite;
 			}
 
-			@keyframes spinLoader {
-				0% { transform: rotate(0deg); }
-				100% { transform: rotate(360deg); }
+			@keyframes pulseLoader {
+				0% { transform: scale(0.5); opacity: 1; border-width: 20px; }
+				50% { transform: scale(1.5); opacity: 0; border-width: 2px; }
+				100% { transform: scale(0.5); opacity: 0; }
+			}
+			
+			@keyframes innerDot {
+				0%, 100% { transform: scale(1); opacity: 0.8; }
+				50% { transform: scale(1.5); opacity: 1; box-shadow: 0 0 15px rgba(255, 45, 85, 0.6); }
 			}
 		</style>
 	</head>

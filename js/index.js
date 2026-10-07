@@ -46,5 +46,9 @@ contentElems.forEach(el => new Content(el));
 // smooth scrolling with Lenis
 initSmoothScrolling();
 
-// Preload images then remove loader (loading class) from body
-preloadImages('.canvas-wrap').then(() => document.body.classList.remove('loading'));
+// Preload images then remove loader (loading class) from body with a premium delay
+preloadImages('.canvas-wrap').then(() => {
+    setTimeout(() => {
+        document.body.classList.remove('loading');
+    }, 1500); // 1.5 second delay for premium feel
+});

@@ -2,7 +2,7 @@
 
 A premium, interactive personal portfolio website for Amira Nawali featuring an ultra-catchy feminine Apple-like UI/UX design, smooth transitions, and multilanguage support (French, English, Arabic).
 
-![Amira Nawali Portfolio](img/toff/IMG-20260911-WA0008.jpg)
+[Amira Nawali Portfolio]
 
 ## Features
 
@@ -36,9 +36,11 @@ A premium, interactive personal portfolio website for Amira Nawali featuring an 
 ## Development Team
 
 ### Original Concept & Content
+
 - **Amira Nawali (Amoura)**
 
 ### Enhancement and UI/UX Design
+
 - **Marwen Rabai** - Premium UI/UX Design & Frontend Development
   - [Portfolio](http://marwenrabai.com)
   - Email: rbnarwenrba@gmail.com

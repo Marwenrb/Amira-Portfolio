@@ -1019,7 +1019,7 @@ h2 span:nth-child(even) {
 }
 
 /* Active language state - the orb covers this option */
-.language-toggle.lang-de .language-toggle__orb {
+.language-toggle.lang-fr .language-toggle__orb {
     transform: translateX(0px);
 }
 
@@ -1032,8 +1032,8 @@ h2 span:nth-child(even) {
 }
 
 /* Show text for non-active languages */
-.language-toggle.lang-de .language-toggle__option[data-lang="en"] .language-toggle__option-text,
-.language-toggle.lang-de .language-toggle__option[data-lang="ar"] .language-toggle__option-text,
+.language-toggle.lang-fr .language-toggle__option[data-lang="en"] .language-toggle__option-text,
+.language-toggle.lang-fr .language-toggle__option[data-lang="ar"] .language-toggle__option-text,
 .language-toggle.lang-en .language-toggle__option[data-lang="de"] .language-toggle__option-text,
 .language-toggle.lang-en .language-toggle__option[data-lang="ar"] .language-toggle__option-text,
 .language-toggle.lang-ar .language-toggle__option[data-lang="de"] .language-toggle__option-text,
@@ -1065,7 +1065,7 @@ h2 span:nth-child(even) {
     left: auto;
 }
 
-.rtl .language-toggle.lang-de .language-toggle__orb {
+.rtl .language-toggle.lang-fr .language-toggle__orb {
     transform: translateX(0px);
 }
 
