@@ -41,10 +41,8 @@ A premium, interactive personal portfolio website for Amira Nawali featuring an 
 
 ### Enhancement and UI/UX Design
 
-- **Marwen Rabai** - Premium UI/UX Design & Frontend Development
-  - [Portfolio](http://marwenrabai.com)
-  - Email: rbnarwenrba@gmail.com
-  - GitHub: [@Marwenrb](https://github.com/Marwenrb)
+- **Cristi Labs** - Premium UI/UX Design & Frontend Development
+  - [Portfolio](https://cristilabs.net)
 
 ## Setup
 
@@ -65,4 +63,4 @@ All rights reserved. This project and its contents are not open for redistributi
 
 ---
 
-Made with ❤ by Marwen
+Made with ❤ by Cristi Labs
